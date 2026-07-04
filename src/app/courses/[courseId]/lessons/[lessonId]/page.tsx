@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { LessonView } from "@/features/courses/ui/LessonView";
 
 export default async function LessonPage({
@@ -7,9 +8,11 @@ export default async function LessonPage({
 }) {
   const { courseId, lessonId } = await params;
   return (
-    <LessonView
-      courseId={courseId as any}
-      lessonId={lessonId as any}
-    />
+    <Suspense fallback={<div className="p-20 text-center">Loading...</div>}>
+      <LessonView
+        courseId={courseId as any}
+        lessonId={lessonId as any}
+      />
+    </Suspense>
   );
 }

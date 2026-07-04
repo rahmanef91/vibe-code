@@ -46,7 +46,7 @@ export const getTeacherDashboard = query({
     const user = await requireAdmin(ctx);
     const courses = await ctx.db
       .query("courses")
-      .filter((q) => q.eq(q.field("teacherId"), user._id))
+      .withIndex("by_teacher", (q) => q.eq("teacherId", user._id))
       .collect();
 
     return { user, courses };

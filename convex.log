@@ -78,3 +78,11 @@ Validator: v.id("users")
 - Preparing Convex functions...
 
 [32m✔[39m 16:05:13 Convex functions ready! (262.28ms)
+- Preparing Convex functions...
+
+[32m✔[39m Added table indexes:
+  [+] courses.by_teacher   teacherId, _creationTime
+✔ 16:27:36 Convex functions ready! (1.24s)
+- Preparing Convex functions...
+
+[32m✔[39m 16:27:39 Convex functions ready! (325.21ms)

@@ -276,3 +276,28 @@ https://nextjs.org/docs/messages/module-not-found
  GET /courses/jn7fej1cygdwb6683w60x7wsj589wwpz 200 in 122ms (next.js: 52ms, application-code: 69ms)
  GET /courses/jn7fej1cygdwb6683w60x7wsj589wwpz/lessons/j97cm2cssppg6k8n3qhvez352d89xh1t 200 in 140ms (next.js: 44ms, application-code: 96ms)
  GET /dashboard 200 in 675ms (next.js: 618ms, application-code: 57ms)
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env.local
+✓ Ready in 1548ms
+⚠ `experimental.cacheComponents` has been moved to `cacheComponents`. Please update your next.config.ts file accordingly.
+⚠ Slow filesystem detected. The benchmark took 249ms. If /app/.next/dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+- Cache Components enabled
+- Experiments (use with caution):
+  ✓ cacheComponents
+
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env.local
+✓ Ready in 434ms
+- Cache Components enabled
+
+ GET / 200 in 859ms (next.js: 336ms, application-code: 523ms)
+ GET /courses 200 in 111ms (next.js: 54ms, application-code: 57ms)
+ GET /courses/jn7fej1cygdwb6683w60x7wsj589wwpz 200 in 718ms (next.js: 662ms, generate-params: 637ms, application-code: 56ms)
+ GET /courses/jn7fej1cygdwb6683w60x7wsj589wwpz/lessons/j97cm2cssppg6k8n3qhvez352d89xh1t 200 in 820ms (next.js: 756ms, generate-params: 651ms, application-code: 63ms)

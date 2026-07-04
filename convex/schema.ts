@@ -12,7 +12,7 @@ export default defineSchema({
     title: v.string(),
     description: v.string(),
     teacherId: v.id("users"),
-  }),
+  }).index("by_teacher", ["teacherId"]),
 
   lessons: defineTable({
     courseId: v.id("courses"),

@@ -1,11 +1,11 @@
 "use client";
 import { useQuery, useMutation } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
-import { Id } from "../../../../convex/_generated/dataModel";
-import { Play, CheckCircle } from "lucide-react";
+import { Play } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
-export function Detail({ courseId }: { courseId: Id<"courses"> }) {
+export function Detail({ courseId }: { courseId: any }) {
   const course = useQuery(api.features.courses.queries.getById, { id: courseId });
   const enroll = useMutation(api.features.courses.mutations.enroll);
 
@@ -17,12 +17,13 @@ export function Detail({ courseId }: { courseId: Id<"courses"> }) {
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 rounded-3xl mb-12">
         <h1 className="text-4xl font-bold mb-4">{course.title}</h1>
         <p className="text-blue-100 text-lg mb-8">{course.description}</p>
-        <button
+        <Button
+          variant="secondary"
+          className="bg-white text-blue-600 rounded-xl font-bold px-8"
           onClick={() => enroll({ courseId })}
-          className="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition"
         >
           Daftar Sekarang
-        </button>
+        </Button>
       </div>
 
       <h2 className="text-2xl font-bold mb-6">Kurikulum</h2>
